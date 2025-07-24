@@ -1,0 +1,335 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header Styles */
+header {
+    background: #2BC0E4;
+    padding: 20px 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo h1 {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #EAECC6;
+    transition: color 0.3s;
+    text-decoration: none;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+}
+
+.nav-links a:hover {
+    color: #000102;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    color: #EAECC6;
+    font-size: 1.5rem;
+}
+h2{
+    text-align: center;
+}
+/* Home Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #EAECC6;
+    padding: 100px 5% 50px;
+    gap: 30px;
+}
+
+.hero-content {
+    flex: 1 1 60%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.hero-content span {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+#pp {
+    flex: 1 1 300px;
+    max-width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #4ECDC4;
+    box-shadow: 0 0 20px #4ECDC4, 0 0 40px #349090;
+    margin: 0 auto;
+}
+
+#pp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button {
+    background: #2BC0E4;
+    color: #EAECC6;
+    padding: 1rem 2rem;
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px;
+    transition: backgroundcolor 0.3s;
+    align-self: center;
+}
+
+button:hover {
+    background: #77d3ea;
+}
+
+/* Social Media Icons */
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #EAECC6;
+    padding: 1rem;
+}
+
+.social-media a {
+    color: #2BC0E4;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #000102;
+}
+
+/* Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+/* Skill Section */
+.skills {
+    padding: 4rem 5%;
+    background: #EAECC6;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.skill-card {
+    background: #2BC0E4;
+    color: #EAECC6;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.skill-card .icons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+    width: 60px;
+    margin-left: 40%;
+    margin-bottom: 2rem;
+    border-radius: 50%;
+}
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+/* Project Section */
+.projects {
+    padding: 4rem 5%;
+    background: #EAECC6;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Services Section */
+.services {
+    padding: 4rem 5%;
+    background: #EAECC6;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 5%;
+    background: #EAECC6;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Card Styles (shared by skills, projects, services) */
+.skill-card,
+.project-card,
+.service-card {
+    background: #2BC0E4;
+    color: #EAECC6;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover,
+.project-card:hover,
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 5%;
+    }
+    
+    .hamburger {
+        display: block;
+        color: black;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 50px;
+        left: -100%;
+        width: 30%;
+        height: 250px;
+        background: #2BC0E4;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 2rem;
+        transition: right 0.3s ease;
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+    
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 120px;
+    }
+    
+    .hero-content {
+        text-align: center;
+        align-items: center;
+    }
+    
+    button {
+        margin-left: 0;
+    }
+    
+    #pp {
+        margin: 30px auto;
+    }
+    
+    .skills-container,
+    .project-container,
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-card,
+    .project-card,
+    .service-card {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1,
+    .hero-content span {
+        text-align: center;
+    }
+    
+    .contact form {
+        width: 100%;
+    }
+    
+    button {
+        width: 100%;
+    }
+}
